@@ -1,0 +1,1 @@
+The subdirectory `debuild/` contains the setup to build a [Docker](https://docker.com/) container that has everything needed to build Debian packages from [Spot's git repository](https://gitlab.lrde.epita.fr/spot/spot.git).
