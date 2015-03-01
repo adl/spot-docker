@@ -18,4 +18,6 @@ autoreconf -vfi
 make "$@"
 make deb "$@" DEBUILDFLAGS="$*"
 
-test -d ../result && mv -f *.deb spot_* ../result
+test -d ../result &&
+    mv -f *.deb ../result &&
+    mv -f spot_* ../result
