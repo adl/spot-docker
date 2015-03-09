@@ -27,3 +27,4 @@ RUN apt-get update && \
 
 WORKDIR /build
 COPY build-spot.sh /build/build-spot.sh
+COPY bin-spot.sh /build/bin-spot.sh
