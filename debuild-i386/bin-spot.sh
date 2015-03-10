@@ -12,6 +12,6 @@ dpkg-source -x result/spot_*.dsc
 cd spot-*
 debuild "$*" -b -us -uc
 
-test -d ../result &&
-    mv -f *.deb ../result &&
-    mv -f spot_* ../result
+cd ..
+mv -f *.deb result
+mv -f spot_* result
