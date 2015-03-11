@@ -13,5 +13,5 @@ cd spot-*
 debuild "$*" -B -us -uc
 
 cd ..
-mv -f *.deb *.changes result
+mv -f *.deb *.changes *.build result
 
