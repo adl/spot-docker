@@ -23,7 +23,7 @@ USER docker
 
 RUN umask 0002 && \
     ipython profile create rise && \
-    git clone --single-branch --depth=1 https://github.com/damianavila/RISE.git && \
+    git clone --single-branch --depth=1 https://github.com/adl/RISE.git && \
     cd RISE && \
     python3 setup.py install --profile rise && cd .. && rm -rf RISE && \
     cd `ipython3 locate`/nbextensions && \
