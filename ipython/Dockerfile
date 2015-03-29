@@ -6,7 +6,7 @@ RUN echo 'deb http://www.lrde.epita.fr/repo/debian/ unstable/' >> /etc/apt/sourc
       apt-get install -y --force-yes --no-install-recommends \
       spot python3-spot python3-pip python3-dev build-essential git graphviz \
       pdf2svg dot2tex texlive-pictures texlive-latex-extra wget sudo \
-      imagemagick libmagickcore-extra ghostscript && \
+      imagemagick libmagickcore-extra ghostscript libbdd0c2 libbdd-dev && \
     pip3 install "ipython[notebook]"
 
 RUN mkdir -p /home/docker && \
@@ -16,7 +16,9 @@ RUN mkdir -p /home/docker && \
 
 COPY run-nb /usr/local/bin/run-nb
 COPY install-ext.py /home/docker/install-ext.py
+COPY install.sh /tmp/install.sh
 
+RUN cd /tmp && ./install.sh && rm -f install.sh
 
 WORKDIR /home/docker
 USER docker
