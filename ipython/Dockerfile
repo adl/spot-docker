@@ -36,8 +36,10 @@ RUN umask 0002 && \
     wget https://gist.github.com/adl/098f5cf7e372720db687/download -O- | \
     tar zxv --strip-components=1 && \
     echo "c.InteractiveShellApp.extensions.append('tikzmagic')" >> `ipython3 locate profile rise`/ipython_config.py && \
+    cd ~ && \
     mkdir examples && \
     cp /usr/share/doc/python3-spot/examples/*.ipynb.gz examples && \
-    gunzip examples/*
+    cd examples && gunzip *.gz && \
+    for i in *.ipynb; do mv $i tmp-$i; ipython3 nbconvert --to notebook tmp-$i --stdout > $i; rm -f tmp-$1; done
 
 USER root
