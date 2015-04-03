@@ -35,6 +35,9 @@ RUN umask 0002 && \
     cd `ipython3 locate`/extensions && \
     wget https://gist.github.com/adl/098f5cf7e372720db687/download -O- | \
     tar zxv --strip-components=1 && \
-    echo "c.InteractiveShellApp.extensions.append('tikzmagic')" >> `ipython3 locate profile rise`/ipython_config.py
+    echo "c.InteractiveShellApp.extensions.append('tikzmagic')" >> `ipython3 locate profile rise`/ipython_config.py && \
+    mkdir examples && \
+    cp /usr/share/doc/python3-spot/examples/*.ipynb.gz examples && \
+    gunzip examples/*
 
 USER root
