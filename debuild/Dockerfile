@@ -20,10 +20,14 @@ RUN apt-get update && \
     texlive-pictures-doc- texlive-pstricks-doc- \
     texlive-fonts-recommended-doc- \
     devscripts \
+    libbdd0c2 libbdd-dev zlib1g-dev \
     && \
     apt-get clean && \
     update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-4.9 20 && \
     update-alternatives --install /usr/bin/g++ g++ /usr/bin/g++-4.9 20
+
+COPY install.sh /tmp/install.sh
+RUN cd /tmp && ./install.sh && rm -f install.sh
 
 WORKDIR /build
 COPY build-spot.sh /build/build-spot.sh
