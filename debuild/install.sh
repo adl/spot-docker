@@ -41,3 +41,12 @@ make -j4
 mv glucose /usr/local/bin
 cd ../..
 rm -rf glucose-syrup
+
+# modella 1.5.9
+wget http://web.archive.org/web/20080607170403/http://www.science.unitn.it/~stonetta/modella/MoDeLLa-1.5.9.tar.gz
+tar xvf MoDeLLa-1.5.9.tar.gz
+cd MoDeLLa-1.5.9
+make -j4
+mv modella /usr/local/bin
+cd ../..
+rm -rf MoDeLLa-1.5.9
