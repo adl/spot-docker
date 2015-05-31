@@ -11,6 +11,7 @@ set -x
 br=$1
 shift
 rm -rf spot
+export PATH=$PATH:/usr/local/bin
 git clone https://gitlab.lrde.epita.fr/spot/spot.git -b "$br" --single-branch
 cd spot
 autoreconf -vfi
