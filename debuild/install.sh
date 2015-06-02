@@ -50,3 +50,13 @@ make -j4
 mv modella /usr/local/bin
 cd ../..
 rm -rf MoDeLLa-1.5.9
+
+# lbtt 1.2.1a
+wget http://spot.lip6.fr/dl/lbtt-1.2.1a.tar.gz
+tar xvf lbtt-1.2.1a.tar.gz
+cd lbtt-1.2.1a
+./configure
+make -j4
+make install
+cd ..
+rm -rf lbtt-1.2.1a
