@@ -12,7 +12,7 @@ RUN apt-get update && \
     graphviz imagemagick \
     doxygen \
     help2man \
-    python-all-dev python3-all-dev python3-pandas \
+    python-all-dev python3-all-dev python3-pandas ipython3-notebook \
     r-base-core r-recommended- r-base-dev- r-base-html- \
     latexmk texlive-latex-extra texlive-fonts-extra \
     texlive-math-extra \
