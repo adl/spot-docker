@@ -16,7 +16,13 @@ cd spot
 autoreconf -vfi
 ./configure PYTHON=/usr/bin/python3 --disable-static
 make "$@"
-make deb "$@" DEBUILDFLAGS="$*"
+if ! make deb "$@" DEBUILDFLAGS="$*"; then
+    error=$?
+    if test -d ../result; then
+	find -name '*.log'  -print0 | tar cf ../result/logs-i386.gz --null -T-
+    fi
+    exit $error
+fi
 
 test -d ../result &&
     mv -f *.deb ../result &&
