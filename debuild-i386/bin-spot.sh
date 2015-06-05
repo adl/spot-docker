@@ -10,7 +10,12 @@ fi
 
 dpkg-source -x result/spot_*.dsc
 cd spot-*
-debuild "$*" -B -us -uc
+
+if ! debuild "$@" -B -us -uc; then
+    error=$?
+    find -name '*.log'  -print0 | tar cf result/logs-i386.gz --null -T-
+    exit $error
+fi
 
 cd ..
 mv -f *.deb *.changes *.build result
