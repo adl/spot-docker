@@ -20,11 +20,10 @@ make "$@"
 # third-party tools.  The build would work even without modifying
 # PATH, but in that case it would skip several tests.
 if ! make deb "$@" DEBUILDFLAGS="--prepend-path=/usr/local/bin $*"; then
-    error=$?
     if test -d ../result; then
 	find -name '*.log'  -print0 | tar cf ../result/logs-amd64.gz --null -T-
     fi
-    exit $error
+    exit 1
 fi
 
 test -d ../result &&

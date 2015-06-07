@@ -17,11 +17,10 @@ autoreconf -vfi
 ./configure PYTHON=/usr/bin/python3 --disable-static
 make "$@"
 if ! make deb "$@" DEBUILDFLAGS="$*"; then
-    error=$?
     if test -d ../result; then
 	find -name '*.log'  -print0 | tar cf ../result/logs-i386.gz --null -T-
     fi
-    exit $error
+    exit 1
 fi
 
 test -d ../result &&
