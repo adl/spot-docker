@@ -12,7 +12,7 @@ dpkg-source -x result/spot_*.dsc
 cd spot-*
 
 if ! debuild "$@" -B -us -uc; then
-    find -name '*.log'  -print0 | tar cf result/logs-i386.gz --null -T-
+    find -name '*.log'  -print0 | tar cf ../result/logs-i386.gz --null -T-
     exit 1
 fi
 
