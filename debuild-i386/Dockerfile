@@ -1,4 +1,4 @@
-FROM mcandre/docker-debian-32bit:sid
+FROM mcandre/docker-debian-32bit:jessie
 MAINTAINER Alexandre Duret-Lutz <adl@lrde.epita.fr>
 RUN apt-get update && \
     RUNLEVEL=1 DEBIAN_FRONTEND=noninteractive \
