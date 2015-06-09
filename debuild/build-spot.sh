@@ -13,7 +13,6 @@ shift
 rm -rf spot
 git clone https://gitlab.lrde.epita.fr/spot/spot.git -b "$br" --single-branch
 cd spot
-sed -i -e 's/unstable/stable/' debian/changelog.in
 autoreconf -vfi
 ./configure PYTHON=/usr/bin/python3 --disable-static
 make "$@"
