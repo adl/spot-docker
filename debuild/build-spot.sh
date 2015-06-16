@@ -13,7 +13,6 @@ shift
 rm -rf spot
 git clone https://gitlab.lrde.epita.fr/spot/spot.git -b "$br" --single-branch
 cd spot
-sed -i -e 's/unstable/stable/' debian/changelog.in
 autoreconf -vfi
 ./configure PYTHON=/usr/bin/python3 --disable-static
 make "$@"
@@ -27,6 +26,16 @@ if ! make deb "$@" DEBUILDFLAGS="--prepend-path=/usr/local/bin $*"; then
     exit 1
 fi
 
-test -d ../result &&
+if test -d ../result; then
     mv -f *.deb ../result &&
     mv -f spot_* ../result
+    (cd wrap/python/ajax &&
+	    tar zcvf ../../../../results/cgi.tar.gz \
+		--exclude '*spotimg*' \
+		--exclude '*#*' \
+		--exclude '*~' \
+		--exclude '*.in' \
+		--exclude 'Makefile*' \
+		--exclude '*__*' \
+		.)
+fi
