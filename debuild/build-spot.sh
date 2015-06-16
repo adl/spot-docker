@@ -37,5 +37,6 @@ if test -d ../result; then
 		--exclude '*.in' \
 		--exclude 'Makefile*' \
 		--exclude '*__*' \
+		--exclude 'README' \
 		.)
 fi
