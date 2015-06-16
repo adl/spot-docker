@@ -23,6 +23,16 @@ mv ltl3ba /usr/local/bin/
 cd ..
 rm -rf ltl3ba-$V ltl3ba-$V.tar.gz
 
+# LTL3DRA
+V=0.2.2
+wget http://sourceforge.net/projects/ltl3dra/files/ltl3dra-$V.tar.gz
+tar xvf ltl3dra-$V.tar.gz
+cd ltl3dra-$V
+make -j4
+mv ltl3dra /usr/local/bin/
+cd ..
+rm -rf ltl3dra-$V ltl3dra-$V.tar.gz
+
 # ltl2dstar
 V=0.5.2
 wget http://www.ltl2dstar.de/down/ltl2dstar-0.5.2.tar.gz
