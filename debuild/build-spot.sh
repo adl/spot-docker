@@ -30,7 +30,7 @@ if test -d ../result; then
     mv -f *.deb ../result &&
     mv -f spot_* ../result
     (cd wrap/python/ajax &&
-	    tar zcvf ../../../../results/cgi.tar.gz \
+	    tar zcvf ../../../../result/cgi.tar.gz \
 		--exclude '*spotimg*' \
 		--exclude '*#*' \
 		--exclude '*~' \
