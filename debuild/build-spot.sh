@@ -39,4 +39,6 @@ if test -d ../result; then
 		--exclude '*__*' \
 		--exclude 'README' \
 		.)
+    strip /usr/local/bin/ltl3ba
+    cp /usr/local/bin/ltl3ba ../result
 fi
