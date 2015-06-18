@@ -70,3 +70,12 @@ make -j4
 make install
 cd ..
 rm -rf lbtt-1.2.1a
+
+# Spin 6.4.3
+wget http://spinroot.com/spin/Src/src643.tar.gz
+tar xvf src643.tar.gz
+cd Src6.4.3
+make -j4
+mv spin /usr/local/bin
+cd ..
+rm -rf Src6.4.3
