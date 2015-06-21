@@ -28,7 +28,7 @@ fi
 
 if test -d ../result; then
     mv -f *.deb ../result &&
-    mv -f spot_* ../result
+    mv -f spot_* spot-*.tar.gz ../result
     (cd wrap/python/ajax &&
 	    tar zcvf ../../../../result/cgi.tar.gz \
 		--exclude '*spotimg*' \
