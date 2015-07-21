@@ -33,8 +33,9 @@ RUN umask 0002 && \
     python3 /home/docker/install-ext.py && rm -f /home/docker/install-ext.py && \
     python3 -m IPython.external.mathjax && \
     cd `ipython3 locate`/extensions && \
-    wget https://gist.github.com/adl/098f5cf7e372720db687/download -O- | \
-    tar zxv --strip-components=1 && \
+    wget https://gist.github.com/adl/098f5cf7e372720db687/download -O tz.zip && \
+    unzip -j tz.zip && \
+    rm -f tz.zip && \
     echo "c.InteractiveShellApp.extensions.append('tikzmagic')" >> `ipython3 locate profile rise`/ipython_config.py && \
     cd ~ && \
     mkdir examples && \
