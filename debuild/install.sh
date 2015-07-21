@@ -34,8 +34,8 @@ cd ..
 rm -rf ltl3dra-$V ltl3dra-$V.tar.gz
 
 # ltl2dstar
-V=0.5.2
-wget http://www.ltl2dstar.de/down/ltl2dstar-0.5.2.tar.gz
+V=0.5.3
+wget http://www.ltl2dstar.de/down/ltl2dstar-$V.tar.gz
 tar xvf ltl2dstar-$V.tar.gz
 cd ltl2dstar-$V/src
 make -j4
