@@ -1,4 +1,4 @@
-A docker container for running [IPython 3.0](http://ipython.org/) over Python 3, and the development version of [Spot](https://gitlab.lrde.epita.fr/spot/spot) (i.e., what will eventually become Spot 2.0).
+A docker container for running [IPython 3.0](http://ipython.org/) over Python 3, and the development version of [Spot](https://spot.lrde.epita.fr/) (i.e., what will eventually become Spot 2.0).
 
 Start it as follows:
 
@@ -21,5 +21,5 @@ The following additional command-line tools are installed in the container, as S
 
 - [ltl2ba](http://www.lsv.ens-cachan.fr/~gastin/ltl2ba/) 1.2b1
 - [ltl3ba](http://sourceforge.net/projects/ltl3ba/) 1.1.2
-- [ltl3dra](http://sourceforge.net/projects/ltl3dra/) 0.2.1
-- [ltl2dstar](http://www.ltl2dstar.de/) 0.5.2
+- [ltl3dra](http://sourceforge.net/projects/ltl3dra/) 0.2.2
+- [ltl2dstar](http://www.ltl2dstar.de/) 0.5.3
