@@ -13,7 +13,7 @@ RUN echo deb http://debian.mirrors.ovh.net/debian sid main > /etc/apt/sources.li
     swig3.0 \
     autoconf automake libtool \
     flex bison \
-    graphviz imagemagick \
+    graphviz imagemagick optipng \
     doxygen \
     help2man \
     python-all-dev python3-all-dev python3-pandas ipython3-notebook \
