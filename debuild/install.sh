@@ -62,7 +62,7 @@ cd ../..
 rm -rf MoDeLLa-1.5.9
 
 # lbtt 1.2.1a
-wget http://spot.lip6.fr/dl/lbtt-1.2.1a.tar.gz
+wget http://www.lrde.epita.fr/dload/spot/lbtt-1.2.1a.tar.gz
 tar xvf lbtt-1.2.1a.tar.gz
 cd lbtt-1.2.1a
 ./configure
