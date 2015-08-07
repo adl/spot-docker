@@ -5,7 +5,7 @@ RUN echo 'deb http://www.lrde.epita.fr/repo/debian/ unstable/' >> /etc/apt/sourc
     RUNLEVEL=1 DEBIAN_FRONTEND=noninteractive \
       apt-get install -y --force-yes --no-install-recommends \
       spot python3-spot python3-pip python3-dev build-essential git graphviz \
-      pdf2svg dot2tex texlive-pictures texlive-latex-extra wget sudo \
+      pdf2svg dot2tex texlive-pictures texlive-latex-extra wget sudo unzip \
       imagemagick libmagickcore-extra ghostscript libbdd0c2 libbdd-dev && \
     pip3 install "ipython[notebook]"
 
@@ -33,8 +33,9 @@ RUN umask 0002 && \
     python3 /home/docker/install-ext.py && rm -f /home/docker/install-ext.py && \
     python3 -m IPython.external.mathjax && \
     cd `ipython3 locate`/extensions && \
-    wget https://gist.github.com/adl/098f5cf7e372720db687/download -O- | \
-    tar zxv --strip-components=1 && \
+    wget https://gist.github.com/adl/098f5cf7e372720db687/download -O tz.zip && \
+    unzip -j tz.zip && \
+    rm -f tz.zip && \
     echo "c.InteractiveShellApp.extensions.append('tikzmagic')" >> `ipython3 locate profile rise`/ipython_config.py && \
     cd ~ && \
     mkdir examples && \

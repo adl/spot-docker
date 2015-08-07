@@ -15,7 +15,7 @@ RUN echo deb http://ftp.uk.debian.org/debian/ jessie main > /etc/apt/sources.lis
     swig3.0 \
     autoconf automake libtool \
     flex bison \
-    graphviz imagemagick \
+    graphviz imagemagick optipng \
     doxygen \
     help2man \
     python-all-dev python3-all-dev python3-pandas ipython3-notebook \
