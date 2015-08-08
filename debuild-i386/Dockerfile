@@ -16,7 +16,7 @@ RUN echo deb http://debian.mirrors.ovh.net/debian sid main > /etc/apt/sources.li
     graphviz imagemagick optipng \
     doxygen \
     help2man \
-    python-all-dev python3-all-dev python3-pandas ipython3-notebook \
+    python-all-dev python3-all-dev python3-pandas ipython3-notebook python3-pygments \
     r-base-core r-recommended- r-base-dev- r-base-html- \
     latexmk texlive-latex-extra texlive-fonts-extra \
     texlive-math-extra \
