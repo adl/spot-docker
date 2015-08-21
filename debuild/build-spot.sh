@@ -22,7 +22,7 @@ make "$@"
 # PATH, but in that case it would skip several tests.
 if ! make deb "$@" DEBUILDFLAGS="--prepend-path=/usr/local/bin $*"; then
     if test -d ../result; then
-	find -name '*.log'  -print0 | tar cf ../result/logs-amd64.gz --null -T-
+	find -name '*.log'  -print0 | tar zcf ../result/logs-amd64.tar.gz --null -T-
     fi
     exit 1
 fi
