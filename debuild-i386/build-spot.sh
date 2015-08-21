@@ -18,7 +18,7 @@ autoreconf -vfi
 make "$@"
 if ! make deb "$@" DEBUILDFLAGS="$*"; then
     if test -d ../result; then
-	find -name '*.log'  -print0 | tar cf ../result/logs-i386.gz --null -T-
+	find -name '*.log'  -print0 | tar zcf ../result/logs-i386.tar.gz --null -T-
     fi
     exit 1
 fi
