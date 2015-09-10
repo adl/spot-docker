@@ -8,6 +8,8 @@ if ! test -f result/spot_*.dsc; then
    exit 2
 fi
 
+export LANG=en_US.UTF-8
+
 dpkg-source -x result/spot_*.dsc
 cd spot-*
 

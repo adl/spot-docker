@@ -12,6 +12,9 @@ br=$1
 shift
 rm -rf spot
 git clone https://gitlab.lrde.epita.fr/spot/spot.git -b "$br" --single-branch
+
+export LANG=en_US.UTF-8
+
 cd spot
 sed -i -e 's/unstable/stable/' debian/changelog.in
 autoreconf -vfi
