@@ -25,11 +25,18 @@ RUN echo deb http://debian.mirrors.ovh.net/debian sid main > /etc/apt/sources.li
     texlive-pictures-doc- texlive-pstricks-doc- \
     texlive-fonts-recommended-doc- \
     devscripts \
+    locales \
     && \
     apt-get clean && \
     update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-4.9 20 && \
     update-alternatives --install /usr/bin/g++ g++ /usr/bin/g++-4.9 20 && \
+    sed -i 's/# \+\(en_US.UTF.*\)/\1/' /etc/locale.gen && \
+    locale-gen && \
     ipython3 -c 'exit;'
+# Running ipython3 once, as above, avoid race conditions when multiple
+# parallel versions of ipython3 are run by the test suite, and they
+# all try to create the default configuration files in the .ipython
+# directory.
 
 WORKDIR /build
 COPY build-spot.sh /build/build-spot.sh
