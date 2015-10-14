@@ -9,7 +9,7 @@ RUN echo deb http://debian.mirrors.ovh.net/debian sid main > /etc/apt/sources.li
     apt-get install -y \
     wget git \
     emacs-nox emacs-goodies-el org-mode \
-    make gcc-4.9 g++-4.9 \
+    make gcc g++ \
     swig3.0 \
     autoconf automake libtool \
     flex bison \
@@ -28,8 +28,6 @@ RUN echo deb http://debian.mirrors.ovh.net/debian sid main > /etc/apt/sources.li
     locales \
     && \
     apt-get clean && \
-    update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-4.9 20 && \
-    update-alternatives --install /usr/bin/g++ g++ /usr/bin/g++-4.9 20 && \
     sed -i 's/# \+\(en_US.UTF.*\)/\1/' /etc/locale.gen && \
     locale-gen && \
     ipython3 -c 'exit;'
