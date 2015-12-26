@@ -11,7 +11,7 @@ RUN echo deb http://ftp.uk.debian.org/debian/ jessie main > /etc/apt/sources.lis
     apt-get install -y \
     wget git \
     emacs-nox emacs-goodies-el org-mode \
-    make gcc g++ \
+    make gcc-4.9 g++-4.9 \
     swig3.0 \
     autoconf automake libtool \
     flex bison \
@@ -31,6 +31,8 @@ RUN echo deb http://ftp.uk.debian.org/debian/ jessie main > /etc/apt/sources.lis
     locales \
     && \
     apt-get clean && \
+    update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-4.9 20 && \
+    update-alternatives --install /usr/bin/g++ g++ /usr/bin/g++-4.9 20 && \
     sed -i 's/# \+\(en_US.UTF.*\)/\1/' /etc/locale.gen && \
     locale-gen && \
     ipython3 -c 'exit;'
