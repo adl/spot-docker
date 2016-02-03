@@ -21,7 +21,6 @@ RUN echo deb http://ftp.uk.debian.org/debian/ jessie main > /etc/apt/sources.lis
     python-all-dev python3-all-dev python3-pandas ipython3-notebook python3-pygments \
     r-base-core r-recommended- r-base-dev- r-base-html- \
     latexmk texlive-latex-extra texlive-fonts-extra \
-    fonts-roboto \
     texlive-math-extra \
     texlive-latex-extra-doc- texlive-fonts-extra-doc- \
     texlive-latex-base-doc- texlive-latex-recommended-doc- \
