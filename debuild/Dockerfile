@@ -21,12 +21,13 @@ RUN echo deb http://ftp.uk.debian.org/debian/ jessie main > /etc/apt/sources.lis
     python-all-dev python3-all-dev python3-pandas ipython3-notebook python3-pygments \
     r-base-core r-recommended- r-base-dev- r-base-html- \
     latexmk texlive-latex-extra texlive-fonts-extra \
+    fonts-roboto \
     texlive-math-extra \
     texlive-latex-extra-doc- texlive-fonts-extra-doc- \
     texlive-latex-base-doc- texlive-latex-recommended-doc- \
     texlive-pictures-doc- texlive-pstricks-doc- \
     texlive-fonts-recommended-doc- \
-    devscripts \
+    devscripts git-buildpackage \
     libbdd0c2 libbdd-dev zlib1g-dev \
     locales \
     && \
@@ -36,7 +37,7 @@ RUN echo deb http://ftp.uk.debian.org/debian/ jessie main > /etc/apt/sources.lis
     sed -i 's/# \+\(en_US.UTF.*\)/\1/' /etc/locale.gen && \
     locale-gen && \
     ipython3 -c 'exit;'
-# Running ipython3 once, as above, avoid race conditions when multiple
+# Running ipython3 once, as above, avoids race conditions when multiple
 # parallel versions of ipython3 are run by the test suite, and they
 # all try to create the default configuration files in the .ipython
 # directory.
