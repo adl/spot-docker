@@ -24,7 +24,7 @@ RUN echo deb http://debian.mirrors.ovh.net/debian sid main > /etc/apt/sources.li
     texlive-latex-base-doc- texlive-latex-recommended-doc- \
     texlive-pictures-doc- texlive-pstricks-doc- \
     texlive-fonts-recommended-doc- \
-    devscripts \
+    devscripts git-buildpackage \
     locales \
     && \
     apt-get clean && \
