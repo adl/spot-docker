@@ -26,7 +26,7 @@ RUN echo deb http://ftp.uk.debian.org/debian/ jessie main > /etc/apt/sources.lis
     texlive-latex-base-doc- texlive-latex-recommended-doc- \
     texlive-pictures-doc- texlive-pstricks-doc- \
     texlive-fonts-recommended-doc- \
-    devscripts git-buildpackage \
+    devscripts git-buildpackage cmake \
     libbdd0c2 libbdd-dev zlib1g-dev \
     locales \
     && \
