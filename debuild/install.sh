@@ -3,6 +3,17 @@
 set -e  # Abort on any error
 set -x  # Show each instruction at is it run
 
+# GNU Libtool
+V=2.4.6
+wget http://ftpmirror.gnu.org/libtool/libtool-$V.tar.gz
+tar xvf libtool-$V.tar.gz
+cd libtool-$V
+./configure
+make -j4
+make install
+cd ..
+rm -rf libtool-$V
+
 # LTL2BA
 V=1.2b1
 wget http://www.lsv.ens-cachan.fr/~gastin/ltl2ba/ltl2ba-$V.tar.gz
