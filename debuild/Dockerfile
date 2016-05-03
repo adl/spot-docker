@@ -5,7 +5,8 @@ MAINTAINER Alexandre Duret-Lutz <adl@lrde.epita.fr>
 # Let's see if this is better when hardcoding another mirror.
 RUN echo deb http://ftp.uk.debian.org/debian/ jessie main > /etc/apt/sources.list && \
     echo deb http://ftp.uk.debian.org/debian/ jessie-updates main >> /etc/apt/sources.list && \
-    echo deb http://security.debian.net jessie/updates main >> /etc/apt/sources.list && \
+    echo deb http://security.debian.org jessie/updates main >> /etc/apt/sources.list && \
+    echo deb http://www.lrde.epita.fr/repo/debian/ stable/ >> /etc/apt/sources.list && \
     apt-get update && \
     RUNLEVEL=1 DEBIAN_FRONTEND=noninteractive \
     apt-get install -y \
@@ -29,6 +30,7 @@ RUN echo deb http://ftp.uk.debian.org/debian/ jessie main > /etc/apt/sources.lis
     devscripts git-buildpackage cmake \
     libbdd0c2 libbdd-dev zlib1g-dev \
     locales \
+    divine-ltsmin \
     && \
     apt-get clean && \
     update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-4.9 20 && \
