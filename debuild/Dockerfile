@@ -9,7 +9,7 @@ RUN echo deb http://ftp.uk.debian.org/debian/ jessie main > /etc/apt/sources.lis
     echo deb http://www.lrde.epita.fr/repo/debian/ stable/ >> /etc/apt/sources.list && \
     apt-get update && \
     RUNLEVEL=1 DEBIAN_FRONTEND=noninteractive \
-    apt-get install -y \
+    apt-get install -y --allow-unauthenticated \
     wget git \
     emacs-nox emacs-goodies-el org-mode \
     make gcc-4.9 g++-4.9 \
