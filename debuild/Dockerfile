@@ -31,6 +31,7 @@ RUN echo deb http://ftp.uk.debian.org/debian/ jessie main > /etc/apt/sources.lis
     libbdd0c2 libbdd-dev zlib1g-dev \
     locales \
     divine-ltsmin \
+    default-jdk ant \
     && \
     apt-get clean && \
     update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-4.9 20 && \
