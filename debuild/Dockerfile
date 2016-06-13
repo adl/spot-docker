@@ -30,7 +30,7 @@ RUN echo deb http://ftp.uk.debian.org/debian/ jessie main > /etc/apt/sources.lis
     devscripts git-buildpackage cmake \
     libbdd0c2 libbdd-dev zlib1g-dev \
     locales \
-    divine-ltsmin \
+    divine-ltsmin spins \
     default-jdk ant \
     && \
     apt-get clean && \
