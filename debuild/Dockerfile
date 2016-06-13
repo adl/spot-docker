@@ -29,7 +29,7 @@ RUN echo deb http://debian.mirrors.ovh.net/debian sid main > /etc/apt/sources.li
     devscripts git-buildpackage cmake \
     libbdd0c2 libbdd-dev zlib1g-dev \
     locales \
-    divine-ltsmin \
+    divine-ltsmin spins \
     default-jdk ant \
     && \
     apt-get clean && \
