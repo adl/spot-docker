@@ -25,12 +25,10 @@ cd ..
 rm -rf ltl2ba-$V ltl2ba-$V.tar.gz
 
 # LTL3BA
-V=1.1.2
+V=1.1.3
 wget http://sourceforge.net/projects/ltl3ba/files/ltl3ba/1.1/ltl3ba-$V.tar.gz
 tar xvf ltl3ba-$V.tar.gz
 cd ltl3ba-$V
-# Fix compilation with g++-6
-perl -pi -e 's/if\(is_final/if(::is_final/' *.c
 make -j4
 mv ltl3ba /usr/local/bin/
 cd ..
