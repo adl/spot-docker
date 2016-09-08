@@ -1,7 +1,7 @@
 #!/bin/sh
 
 set -e  # Abort on any error
-set -x  # Show each instruction at is it run
+set -x  # Show each instruction as is it run
 
 # GNU Libtool
 V=2.4.6
