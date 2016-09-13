@@ -35,12 +35,10 @@ cd ..
 rm -rf ltl3ba-$V ltl3ba-$V.tar.gz
 
 # LTL3DRA
-V=0.2.2
+V=0.2.3
 wget http://sourceforge.net/projects/ltl3dra/files/ltl3dra-$V.tar.gz
 tar xvf ltl3dra-$V.tar.gz
 cd ltl3dra-$V
-# Fix compilation with g++-6
-perl -pi -e 's/if\(is_final/if(::is_final/;s/!is_final/!::is_final/' *.c
 make -j4
 mv ltl3dra /usr/local/bin/
 cd ..
