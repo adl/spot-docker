@@ -69,8 +69,17 @@ tar xvf MoDeLLa-1.5.9.tar.gz
 cd MoDeLLa-1.5.9
 make -j4
 mv modella /usr/local/bin
-cd ../..
+cd ..
 rm -rf MoDeLLa-1.5.9
+
+# lbt 1.2.2
+wget http://www.tcs.hut.fi/Software/maria/src/lbt-1.2.2.tar.gz
+tar xvf lbt-1.2.2.tar.gz
+cd lbt-1.2.2
+make -j4
+cp lbt /usr/local/bin
+cd ..
+rm -rf lbt-1.2.2
 
 # lbtt 1.2.1a
 wget http://www.lrde.epita.fr/dload/spot/lbtt-1.2.1a.tar.gz
