@@ -1,7 +1,7 @@
 #!/bin/sh
 
 set -e  # Abort on any error
-set -x  # Show each instruction at is it run
+set -x  # Show each instruction as is it run
 
 # GNU Libtool
 V=2.4.6
@@ -25,7 +25,7 @@ cd ..
 rm -rf ltl2ba-$V ltl2ba-$V.tar.gz
 
 # LTL3BA
-V=1.1.2
+V=1.1.3
 wget http://sourceforge.net/projects/ltl3ba/files/ltl3ba/1.1/ltl3ba-$V.tar.gz
 tar xvf ltl3ba-$V.tar.gz
 cd ltl3ba-$V
@@ -35,7 +35,7 @@ cd ..
 rm -rf ltl3ba-$V ltl3ba-$V.tar.gz
 
 # LTL3DRA
-V=0.2.2
+V=0.2.3
 wget http://sourceforge.net/projects/ltl3dra/files/ltl3dra-$V.tar.gz
 tar xvf ltl3dra-$V.tar.gz
 cd ltl3dra-$V
@@ -69,8 +69,17 @@ tar xvf MoDeLLa-1.5.9.tar.gz
 cd MoDeLLa-1.5.9
 make -j4
 mv modella /usr/local/bin
-cd ../..
+cd ..
 rm -rf MoDeLLa-1.5.9
+
+# lbt 1.2.2
+wget http://www.tcs.hut.fi/Software/maria/src/lbt-1.2.2.tar.gz
+tar xvf lbt-1.2.2.tar.gz
+cd lbt-1.2.2
+make -j4
+cp lbt /usr/local/bin
+cd ..
+rm -rf lbt-1.2.2
 
 # lbtt 1.2.1a
 wget http://www.lrde.epita.fr/dload/spot/lbtt-1.2.1a.tar.gz
