@@ -18,7 +18,8 @@ RUN echo deb http://ftp.uk.debian.org/debian/ jessie main > /etc/apt/sources.lis
     graphviz imagemagick optipng \
     doxygen \
     help2man pandoc groff \
-    python-all-dev python3-all-dev python3-pandas ipython3-notebook python3-pygments \
+    python-all-dev python3-all-dev python3-pandas python3-ipykernel \
+    python3-nbconvert python3-entrypoints python3-pygments \
     r-base-core r-recommended- r-base-dev- r-base-html- \
     latexmk texlive-latex-extra texlive-fonts-extra \
     texlive-math-extra \

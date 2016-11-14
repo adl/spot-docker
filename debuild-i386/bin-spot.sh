@@ -19,4 +19,6 @@ if ! debuild "$@" -B -us -uc; then
 fi
 
 cd ..
-mv -f *.deb *.changes *.build result
+test -d result &&
+    mv -f *.deb result &&
+    mv -f spot_* result
