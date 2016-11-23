@@ -99,3 +99,8 @@ make -j4
 mv spin /usr/local/bin
 cd ..
 rm -rf Src6.4.3
+
+# GAL2C
+wget http://teamcity.lrde.epita.fr/repository/download/Spot_Gal2cStretch/.lastSuccessful/gal2c?guest=1 -O gal2c
+chmod a+x gal2c
+mv gal2c /usr/local/bin
