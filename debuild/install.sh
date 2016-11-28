@@ -8,7 +8,9 @@ V=2.4.6
 wget http://ftpmirror.gnu.org/libtool/libtool-$V.tar.gz
 tar xvf libtool-$V.tar.gz
 cd libtool-$V
-./configure
+# Debian has its own libltdl that we want to use when
+# building the Debian packages.
+./configure --disable-ltdl-install
 make -j4
 make install
 cd ..
