@@ -1,4 +1,4 @@
-FROM mcandre/docker-debian-32bit:sid
+FROM gadl/debian-i386:sid
 MAINTAINER Alexandre Duret-Lutz <adl@lrde.epita.fr>
 # We have a lot of timeout issues when fetching packages from
 # http://httpredir.debian.org/debian
