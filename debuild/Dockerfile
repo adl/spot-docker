@@ -4,10 +4,10 @@ MAINTAINER Alexandre Duret-Lutz <adl@lrde.epita.fr>
 # http://httpredir.debian.org/debian
 # Let's see if this is better when hardcoding another mirror.
 RUN echo deb http://debian.mirrors.ovh.net/debian sid main > /etc/apt/sources.list && \
-    echo deb http://www.lrde.epita.fr/repo/debian/ unstable/ >> /etc/apt/sources.list && \
+    echo 'deb [trust=true] http://www.lrde.epita.fr/repo/debian/ unstable/' >> /etc/apt/sources.list && \
     apt-get update && \
     RUNLEVEL=1 DEBIAN_FRONTEND=noninteractive \
-    apt-get install -y --allow-unauthenticated \
+    apt-get install -y \
     wget git \
     emacs-nox emacs-goodies-el org-mode \
     make gcc g++ \
