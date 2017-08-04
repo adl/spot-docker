@@ -6,10 +6,10 @@ MAINTAINER Alexandre Duret-Lutz <adl@lrde.epita.fr>
 RUN echo deb http://debian.mirrors.ovh.net/debian stretch main > /etc/apt/sources.list && \
     echo deb http://debian.mirrors.ovh.net/debian stretch-updates main >> /etc/apt/sources.list && \
     echo deb http://security.debian.org stretch/updates main >> /etc/apt/sources.list && \
-    echo deb http://www.lrde.epita.fr/repo/debian/ stable/ >> /etc/apt/sources.list && \
+    echo 'deb [trusted=true] http://www.lrde.epita.fr/repo/debian/ stable/' >> /etc/apt/sources.list && \
     apt-get update && \
     RUNLEVEL=1 DEBIAN_FRONTEND=noninteractive \
-    apt-get install -y --allow-unauthenticated \
+    apt-get install -y \
     wget git \
     emacs-nox emacs-goodies-el org-mode \
     make gcc g++ \
