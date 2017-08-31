@@ -22,7 +22,7 @@ RUN echo deb http://debian.mirrors.ovh.net/debian stretch main > /etc/apt/source
     python3-nbconvert python3-entrypoints python3-pygments \
     r-base-core r-recommended- r-base-dev- r-base-html- \
     latexmk texlive-latex-extra texlive-fonts-extra \
-    texlive-math-extra \
+    texlive-science \
     texlive-latex-extra-doc- texlive-fonts-extra-doc- \
     texlive-latex-base-doc- texlive-latex-recommended-doc- \
     texlive-pictures-doc- texlive-pstricks-doc- \
