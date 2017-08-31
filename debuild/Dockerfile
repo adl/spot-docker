@@ -33,7 +33,7 @@ RUN echo deb http://debian.mirrors.ovh.net/debian stretch main > /etc/apt/source
     libbdd0c2 libbdd-dev zlib1g-dev \
     locales \
     divine-ltsmin spins \
-    default-jdk ant \
+    default-jdk ant dot2tex \
     && \
     apt-get clean && \
     sed -i 's/# \+\(en_US.UTF.*\)/\1/' /etc/locale.gen && \

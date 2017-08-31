@@ -106,3 +106,10 @@ rm -rf Src6.4.6
 wget http://teamcity.lrde.epita.fr/repository/download/Spot_Gal2c/.lastSuccessful/gal2c?guest=1 -O gal2c
 chmod a+x gal2c
 mv gal2c /usr/local/bin
+
+# dot2tex from git, because the last release from 2014 has bugs
+git clone https://github.com/kjellmf/dot2tex.git
+cd dot2tex
+python setup.py install
+cd ..
+rm -rf dot2tex
