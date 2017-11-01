@@ -17,7 +17,7 @@ RUN echo deb http://debian.mirrors.ovh.net/debian sid main > /etc/apt/sources.li
     doxygen \
     help2man pandoc groff \
     python-all-dev python3-all-dev python3-pandas python3-ipykernel \
-    python3-nbconvert python3-entrypoints python3-pygments \
+    python3-nbconvert python3-entrypoints python3-pygments ipython3 \
     r-base-core r-recommended- r-base-dev- r-base-html- \
     latexmk texlive-latex-extra texlive-fonts-extra \
     texlive-science \
