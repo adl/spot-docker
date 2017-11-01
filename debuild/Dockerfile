@@ -30,7 +30,7 @@ RUN echo deb http://debian.mirrors.ovh.net/debian sid main > /etc/apt/sources.li
     devscripts git-buildpackage cmake \
     libbdd0c2 libbdd-dev zlib1g-dev \
     locales \
-    divine-ltsmin spins \
+    divine-ltsmin spins spin \
     default-jdk ant dot2tex lcov \
     && \
     apt-get clean && \

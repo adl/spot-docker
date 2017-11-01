@@ -94,13 +94,13 @@ cd ..
 rm -rf lbtt-1.2.1a
 
 # Spin 6.4.6
-wget http://spinroot.com/spin/Src/src646.tar.gz
-tar xvf src646.tar.gz
-cd Src6.4.6
-make -j4
-mv spin /usr/local/bin
-cd ..
-rm -rf Src6.4.6
+# wget http://spinroot.com/spin/Src/src646.tar.gz
+# tar xvf src646.tar.gz
+# cd Src6.4.6
+# make -j4
+# mv spin /usr/local/bin
+# cd ..
+# rm -rf Src6.4.6
 
 # GAL2C
 wget http://teamcity.lrde.epita.fr/repository/download/Spot_Gal2cStretch/.lastSuccessful/gal2c?guest=1 -O gal2c
