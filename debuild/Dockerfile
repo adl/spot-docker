@@ -32,7 +32,7 @@ RUN echo deb http://debian.mirrors.ovh.net/debian sid main > /etc/apt/sources.li
     locales \
     divine-ltsmin spins spin \
     default-jdk ant dot2tex pdf2svg lcov \
-    g++-mingw-w64-i686 \
+    g++-mingw-w64-i686 gcc-snapshot \
     && \
     apt-get clean && \
     sed -i 's/# \+\(en_US.UTF.*\)/\1/' /etc/locale.gen && \
