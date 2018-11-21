@@ -1,1 +1,2 @@
-The subdirectory `debuild/` contains the setup to build a [Docker](https://docker.com/) container that has everything needed to build Debian packages from [Spot's git repository](https://gitlab.lrde.epita.fr/spot/spot.git).
+This repository is obsolete.
+The definitions of the docker images we use today are in https://gitlab.lrde.epita.fr/spot/buildenv, and we build them locally at the LRDE.  They get pushed into a private repository.
